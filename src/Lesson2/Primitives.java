@@ -42,5 +42,17 @@ public class Primitives {
         float myFloat = 0.123456789f;
         System.out.println(myDouble);
         System.out.println(myFloat);
+
+       // Char - character (символы), 16 bit
+        char letter = 70; // F
+        System.out.println(letter);
+
+        char newLine = '\n'; // символ перевода строки
+        System.out.print("a");
+        System.out.print(newLine); // перевод строки
+        System.out.print("b\n");
+        char escape = '\\'; // Экранирование строки (т.е. выводится \ с новой строки).
+        System.out.println(escape);
+
     }
 }

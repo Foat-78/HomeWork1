@@ -7,5 +7,9 @@ public class Variables {
         System.out.println(countApples);
         byte count = 14;
         System.out.println(count);
+
+        var countPeople = 15;
+        var letter = "f";
+
     }
 }
