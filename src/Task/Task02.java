@@ -21,7 +21,7 @@ public class Task02 {
         if (number > number1) {
             System.out.println("a = " + number + ";" + "b = " + number1 + " -> " + "max = " + number);
         }else {
-            System.out.println("a = " + number + ";" + " b = " + number1 + " -> " + "max = " + number1);
+            System.out.println("a = " + number + ";" + " b = " +number1 + " -> " + "max = " + number1);
         }
     }
 }
