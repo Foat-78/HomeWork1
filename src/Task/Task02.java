@@ -23,5 +23,10 @@ public class Task02 {
         }else {
             System.out.println("a = " + number + ";" + " b = " +number1 + " -> " + "max = " + number1);
         }
+
+        // Решение тернарником
+        System.out.println(number > number1 ?
+                "a = " + number + ";" + "b = " + number1 + " -> " + "max = " + number :
+                "a = " + number + ";" + " b = " +number1 + " -> " + "max = " + number1);
     }
 }
