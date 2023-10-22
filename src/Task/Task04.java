@@ -11,17 +11,13 @@ import java.util.Scanner;
 // 22, 3, 9 -> 22
 public class Task04 {
     public static void main(String[] args) {
-        System.out.print("Введите 1 число: ");
+        System.out.println("Введите любые 3 числa: ");
         Scanner scanner = new Scanner(System.in);
         int numbers = scanner.nextInt();
 
-        System.out.print("Введите 2 число: ");
-        Scanner scanner1 = new Scanner(System.in);
-        int numbers1 = scanner1.nextInt();
+        int numbers1 = scanner.nextInt();
 
-        System.out.print("Введите 3 число: ");
-        Scanner scanner2 = new Scanner(System.in);
-        int numbers2 = scanner2.nextInt();
+        int numbers2 = scanner.nextInt();
 
         // Решение через библиотеку
         int num = Math.max(numbers, numbers1);
