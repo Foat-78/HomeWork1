@@ -17,5 +17,10 @@ public class Task01 {
         }else {
             System.out.println("Первое число не является квадратом второго: " + number + " !^ " + number1);
         }
+
+        // Решение тернарником
+        System.out.println(number * number == number1 ?
+                "Первое число является квадратом второго: " + number + " -> " + number1 :
+                "Первое число не является квадратом второго: " + number + " !^ " + number1);
     }
 }
