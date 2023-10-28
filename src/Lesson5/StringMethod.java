@@ -57,7 +57,7 @@ public class StringMethod {
         System.out.println(substring); // Khisa
 
         // Комбинированный способ т.е.
-        // исспользоавние несколько методов в одной строке
+        // исспользование несколько методов в одной строке
         String s1 = "Foat".toUpperCase().replaceAll("AT", "ur");
         System.out.println(s1); // FOur
     }
