@@ -19,14 +19,14 @@ public class Task02 {
         int number1 = scanner1.nextInt();
 
         if (number > number1) {
-            System.out.println("a = " + number + ";" + "b = " + number1 + " -> " + "max = " + number);
+            System.out.println("a = " + number + ";" + " b = " + number1 + " -> " + "max = " + number);
         }else {
             System.out.println("a = " + number + ";" + " b = " +number1 + " -> " + "max = " + number1);
         }
 
         // Решение тернарником
         System.out.println(number > number1 ?
-                "a = " + number + ";" + "b = " + number1 + " -> " + "max = " + number :
+                "a = " + number + ";" + " b = " + number1 + " -> " + "max = " + number :
                 "a = " + number + ";" + " b = " +number1 + " -> " + "max = " + number1);
     }
 }

@@ -15,5 +15,6 @@ public class Task00 {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         System.out.println(number + " -> " + number * number);
+        System.out.printf("%d -> %d", number, number * number);
     }
 }

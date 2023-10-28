@@ -22,5 +22,10 @@ public class Task01 {
         System.out.println(number * number == number1 ?
                 "Первое число является квадратом второго: " + number + " -> " + number1 :
                 "Первое число не является квадратом второго: " + number + " !^ " + number1);
+        // Решение со спецсимволами
+        System.out.printf(number * number == number1 ?
+                "Первое число является квадратом второго: %d -> %d":
+                "Первое число не является квадратом второго: %d !^ %d", number, number1, number, number1);
+
     }
 }
