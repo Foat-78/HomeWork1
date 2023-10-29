@@ -1,4 +1,4 @@
-package Lesson5;
+package StartJava.Lesson5;
 
 public class FormatPractice {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class FormatPractice {
         // Есть ли у нее автоматическая коробка передач?
         // [Да/Нет]
 
-            System.out.printf("Привет, я менеджер салона %s. У нас есть модель - %s за %f евро." +
+            System.out.printf("Привет, я менеджер салона %s. У нас есть модель - %s за %.2f евро." +
                     "Есть ли у нее автоматическая коробка передач? %s", carMark, carModel, price, hasAutomaticTransmission ? "Да" : "Нет");
    }
 }

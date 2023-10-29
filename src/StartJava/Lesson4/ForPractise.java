@@ -1,6 +1,4 @@
-package Lesson4;
-
-import java.util.Arrays;
+package StartJava.Lesson4;
 
 public class ForPractise {
     public static void main(String[] args) {

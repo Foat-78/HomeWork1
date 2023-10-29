@@ -17,12 +17,12 @@ public class Cat {
        System.out.printf("Кот дерёт диван %s", sofaOwner);
    }
 
-   @Override
-   public String toString() {
-      return "Cat{" +
-              "color='" + color + '\'' +
-              ", weight=" + weight +
-              ", ownerNaime='" + ownerName + '\'' +
-              '}';
-   }
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "color='" + color + '\'' +
+                ", weight=" + weight +
+                ", ownerName='" + ownerName + '\'' +
+                '}';
+    }
 }

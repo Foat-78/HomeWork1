@@ -1,4 +1,4 @@
-package Lesson4;
+package StartJava.Lesson4;
 
 public class MultiArray {
     public static void main(String[] args) {

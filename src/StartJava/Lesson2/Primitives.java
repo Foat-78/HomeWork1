@@ -1,4 +1,4 @@
-package Lesson2;
+package StartJava.Lesson2;
 
 public class Primitives {
     public static void main(String[] args) {
