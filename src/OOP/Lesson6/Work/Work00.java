@@ -60,4 +60,24 @@ public class Work00 {
             default: return "Данного дня недели не существует";
         }
     }
+
+    // Задача 05
+    // Напишите программу, которая на вход принимает три
+    // числа и выдаёт максимальное из этих чисел.
+    //Пример:
+    // 2, 3, 7 -> 7
+    // 44, 5, 78 -> 78
+    // 22, 3, 9 -> 22
+
+    public int maxOfThree(int num1, int num2, int num3){
+        // Первый вариант
+//        if (num2 > num1 & num2 > num3){
+//            return num2;
+//        } else if (num1 > num2 & num1 > num3) {
+//            return num1;
+//        }else return num3;
+
+        // Второй вариант
+        return num2 > num1 & num2 > num3 ? num2 : num1 > num2 & num1 > num3 ? num1 : num3;
+    }
 }
