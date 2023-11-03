@@ -1,7 +1,5 @@
 package OOP.Lesson6.Work;
 
-import java.sql.Array;
-
 public class Work00 {
     // Задача 01
     // 1. на входе принимает число и
@@ -69,7 +67,8 @@ public class Work00 {
     // 44, 5, 78 -> 78
     // 22, 3, 9 -> 22
 
-    public int maxOfThree(int num1, int num2, int num3){
+    // Метод перегрузка
+    public int maxNumbers(int num1, int num2, int num3){
         // Первый вариант
 //        if (num2 > num1 & num2 > num3){
 //            return num2;
@@ -79,5 +78,21 @@ public class Work00 {
 
         // Второй вариант
         return num2 > num1 & num2 > num3 ? num2 : num1 > num2 & num1 > num3 ? num1 : num3;
+    }
+
+    // Задача 06
+    // Напишите программу, которая на вход принимает
+    // одно число (N), а на выход показывает все целые числа в промежутке от -N до N.
+    // 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
+    // 2 -> "-2, -1, 0, 1, 2"
+
+    public int numIntExit(int numInt) {
+        System.out.printf("%d -> ", numInt);
+        int count = -numInt;
+        while (count + 1 <= numInt) {
+            System.out.print(count + ", ");
+            count++;
+        }
+        return count;
     }
 }
