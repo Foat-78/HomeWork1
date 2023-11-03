@@ -107,6 +107,18 @@ public class Work00 {
     public String evenNumber(int num){
             return String.format("%d -> %s", num, num % 2 == 0 ? "Да" : "Нет");
     }
+
+    // Задача 08
+    // Напишите программу, которая принимает на вход
+    // трёхзрачное число и выход показывает последнюю цифру
+    //этого числа.
+    // 456 -> 6
+    // 782 -> 2
+    // 918 -> 8
+
+    public int secondNumbers (int num){
+        return num / 10 % 10;
+    }
 }
 
 
