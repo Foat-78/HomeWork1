@@ -119,6 +119,34 @@ public class Work00 {
     public int secondNumbers (int num){
         return num / 10 % 10;
     }
+
+    // Задача 09
+    // Напишите программу, которая на вход принимает число (N),
+    // а на выходе показывает все чётные числа от 1 до N/
+    // Например:
+    // 5 -> 2, 4
+    // 8 -> 2, 4, 6, 8
+
+    public String evenNumbers(int numbers) {
+        System.out.printf("%d -> \"", numbers);
+          for (int i = 2; i < numbers ; i++) {
+               System.out.print(i % 2 == 0 ? i  : ", ");
+          }
+        return String.format(numbers % 2 == 0 ? numbers + "\"" : "\"" );
+    }
+
+    // Задача 10
+    // Напишите программу, которая выводит
+    // случайное число из отрезка [10, 99] и показывает
+    // наибольшую цифру числа.
+    // 78 -> 8
+    // 12-> 2
+    // 85 -> 8
+
+    public String maxRandomeNumbers(int numbers){
+        return String.format("%d -> %s", numbers, numbers % 10 > numbers / 10 ?
+                numbers % 10 : numbers % 10 == numbers / 10 ? "Равны" : numbers / 10);
+    }
 }
 
 
