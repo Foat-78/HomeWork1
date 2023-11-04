@@ -147,6 +147,30 @@ public class Work00 {
         return String.format("%d -> %s", numbers, numbers % 10 > numbers / 10 ?
                 numbers % 10 : numbers % 10 == numbers / 10 ? "Равны" : numbers / 10);
     }
+
+    // задача 11
+    // Напишите программу, которая принимает на вход
+    // трёхзначное число и на выходе показывает
+    // вторую цифру этого числа.
+    // 456 -> 5
+    // 782 -> 8
+    // 918 -> 1
+
+    public String maxFreeDigitNumber(int numbers){
+        return String.format("%d -> %s", numbers, numbers / 10 % 10);
+    }
+
+    // Задача 12
+    // Напишите программу, которая выводит случайное
+    // трёхзначное число и удаляет вторую цифру этого
+    // числа.
+    // 456 -> 46
+    // 782 -> 72
+    // 918 -> 98
+
+    public String firstAndThirdNumbers(int numbers){
+        return String.format("%d -> %d%d", numbers, numbers / 100 % 10, numbers % 10);
+    }
 }
 
 
