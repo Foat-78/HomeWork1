@@ -1,24 +1,24 @@
 package Task;
-// Задача 14
-// Напишите программу, которая выводит третью
-// цифру заданного числа или сообщает,
-// что третьей цифры нет.
 
 import java.util.Scanner;
 
-// 645 -> 5
-// 78 -> третьей цифры нет
-// 32679 -> 6
+// Задача 25: Напишите цикл,
+//  который принимает на вход два числа (A и B)
+//  и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
 public class Task29 {
     public static void main(String[] args) {
-        int num = 12344678;
-        int reversed = 0;
-
-        while(num != 0) {
-            int digit = num % 10;
-            reversed = reversed * 10 + digit;
-            num /= 10;
+        System.out.println("Введите два числа: ");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        int num1 = scanner.nextInt();
+        int i = 0;
+        int num2 = 1;
+        while (i < num1){
+            num2 = num2 * num;
+            i++;
         }
-        System.out.println("Reversed Number: " + reversed);
+        System.out.printf("%d, %d -> %d", num, num1, num2);
     }
 }
