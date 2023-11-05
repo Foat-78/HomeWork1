@@ -11,12 +11,25 @@ public class Task19 {
         System.out.print("Введите пятизначное число для определения полиндрома: ");
         Scanner scanner = new Scanner(System.in);
         int numbers = scanner.nextInt();
-        if (numbers < 100000 && numbers > 999) {
-            System.out.println(numbers % 10 == numbers / 10000 & numbers / 1000 % 10 == numbers % 100 / 10 ?
-                    numbers + " -> " + "Да" :
-                    numbers + " -> " + "Нет");
-        }else {
-            System.out.println("Ввели не корректное число. Необходимо ввести пятизначное число!!!");
+        // Вариант для пятизначного числа
+//        if (numbers < 100000 && numbers > 999) {
+//            System.out.println(numbers % 10 == numbers / 10000 & numbers / 1000 % 10 == numbers % 100 / 10 ?
+//                    numbers + " -> " + "Да" :
+//                    numbers + " -> " + "Нет");
+//        }else {
+//            System.out.println("Ввели не корректное число. Необходимо ввести пятизначное число!!!");
+//        }
+
+        // Вариант для любого количества числа
+        int numbers1 = numbers;
+        int reverse = 0;
+        while (numbers != 0){
+            int remainder = numbers % 10;
+            reverse = reverse * 10 + remainder;
+            numbers /= 10;
         }
+        if (numbers1 == reverse){
+            System.out.printf("%d -> Да", numbers1);
+        }else System.out.printf("%d -> Нет", numbers1);
     }
 }
