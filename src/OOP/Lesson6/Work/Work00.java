@@ -193,19 +193,35 @@ public class Work00 {
     // что третьей цифры нет.
     // 645 -> 5
     // 78 -> третьей цифры нет
-    // 32679 -> 6
 
-    public String thirdNumbers(long num){
+    // 32679 -> 6
+    public String thirdNumbers(long num) {
         System.out.printf("%d -> ", num);
-        if (num > 999){
-            while (num > 999){
+        // Первый вариант - когда число делим на 10 до того как будет трёхзначная цифра и выводим остаток от деления на 10
+//        if (num > 999){
+//            while (num > 999){
+//                num = num / 10;
+//            }
+//            return String.format("%d", num % 10);
+//        } else if (num > 100) {
+//            return String.format("%d", num % 10);
+//        }else{
+//            return "третьей цифры нет";
+//        }
+
+
+
+        // Второй вариант - это когда заданное число переворачиваем и делим на 100 и выводим остаток от деления на 10
+        if (num < 99){
+            return "третьей цифры нет";
+        }else {
+            long reverse = 0;
+            while (num != 0){
+                long remainder = num % 10;
+                reverse = reverse * 10 + remainder;
                 num = num / 10;
             }
-            return String.format("%d", num % 10);
-        } else if (num > 100) {
-            return String.format("%d", num % 10);
-        }else{
-            return "третьей цифры нет";
+            return String.format("%d", reverse / 100 % 10);
         }
     }
 }

@@ -12,10 +12,18 @@ public class Task13 {
     public static void main(String[] args) {
         System.out.print("Введите число для определения третьей цифры: ");
         Random rnd = new Random();
-        int numbers = rnd.nextInt(1999);
-        System.out.println(numbers);
-        System.out.println(numbers <= 99 ?
-                numbers + " -> " + "третьей цифры нет" :
-                numbers + " -> " + numbers % 1000 / 100);
+        int numbers = rnd.nextInt(99999);
+        System.out.printf("%d -> ", numbers);
+        if (numbers <= 99){
+            System.out.print("третьей цифры нет");
+        } else {
+            int reverse = 0;
+            while (numbers != 0){
+                int remainder = numbers % 10;
+                reverse = reverse * 10 + remainder;
+                numbers /= 10;
+            }
+            System.out.printf("%d", reverse / 100 % 10);
+        }
     }
 }
