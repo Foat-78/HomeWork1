@@ -171,6 +171,42 @@ public class Work00 {
     public String firstAndThirdNumbers(int numbers){
         return String.format("%d -> %d%d", numbers, numbers / 100 % 10, numbers % 10);
     }
-}
 
+    // Задача 13
+    // Напишите программу, которая будет принимать на
+    // вход два числа и выводить, является ли первое число
+    // кратным второму. Если первое число не кратно
+    // второму, то программа выводит остаток от деления.
+    // 34, 5 -> не кратно, остаток 4
+    // 16, 4 -> кратно
+
+    public String multipleNumbers(int num1, int num2){
+//        return String.format("%d, %d -> %s", num1, num2, num1 % num2 == 0 ? "кратно" : "не кратно, остаток " + num1 % num2);
+        if (num1 % num2 == 0 | num2 % num1 == 0){
+            return String.format("%d, %d -> кратно", num1, num2);
+        }else return "не кратно, остаток " + num1 % num2;
+    }
+
+    // Задача 14
+    // Напишите программу, которая выводит третью
+    // цифру заданного числа или сообщает,
+    // что третьей цифры нет.
+    // 645 -> 5
+    // 78 -> третьей цифры нет
+    // 32679 -> 6
+
+    public String thirdNumbers(long num){
+        System.out.printf("%d -> ", num);
+        if (num > 999){
+            while (num > 999){
+                num = num / 10;
+            }
+            return String.format("%d", num % 10);
+        } else if (num > 100) {
+            return String.format("%d", num % 10);
+        }else{
+            return "третьей цифры нет";
+        }
+    }
+}
 
