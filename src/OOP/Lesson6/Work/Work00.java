@@ -333,7 +333,6 @@ public class Work00 {
 
 
     // Задача 31
-    // Задача 31:
     // 1. Задайте массив из 12 элементов,
     // 2. заполненный случайными числами из промежутка [-9, 9].
     // 3. Найдите сумму отрицательных и положительных элементов массива.
@@ -361,7 +360,48 @@ public class Work00 {
         return String.format("%s: %d\n%s: %d", "Сумма положительных чисел равна",
                 sumPositiveNumbers, "Сумма отрицательных чисел равна",  sumNegativeNumbers);
     }
+
+    // Задача 32
+    //  Напишите программу замена элементов
+    // массива: положительные элементы замените на
+    // соответствующие отрицательные, и наоборот.
+    // [-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+    public int[] arrays(int size, int min, int max){
+        int[] array = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(min,max);
+        }
+        return array;
+    }
+
+    public int[] replaceOfElementsArrays(int[] arr){
+        int[] replArray = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            replArray[i] = arr[i ] * -1;
+        }
+        return replArray;
+    }
+
+    // Задача 33:
+    // 1. Задайте массив.
+    // 2. Напишите программу, которая определяет элементы,
+    // присутствует ли заданное число в массиве.
+    // 4: массив [6,7,19,345,3]->нет
+    // 3: массив [6,7,19,345,3]->да
+
+
+    public int[] arr(int size){
+        int[] array = new int[size];
+        Random rnd = new Random();
+        for (int i = 0; i < array.length; i++) array[i] = rnd.nextInt(1,5);
+        return array;
+    }
+    public String presenceNum(int[]array, int num){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == num) return String.format(" -> Да");
+            }
+        return String.format(" -> Нет");
+    }
 }
-
-
-
