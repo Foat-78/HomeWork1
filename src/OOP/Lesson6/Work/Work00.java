@@ -1,5 +1,7 @@
 package OOP.Lesson6.Work;
 
+import java.util.Random;
+
 public class Work00 {
     // Задача 01
     // 1. на входе принимает число и
@@ -298,6 +300,67 @@ public class Work00 {
         return "Такой четверти не существует";
     }
 
+    // Задача 29: Напишите программу,
+    //  которая задаёт массив из 8 элементов
+    //  и выводит их на экран.
+    // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+    // 6, 1, 33 -> [6, 1, 33]
+
+    public int[] array(int num) {
+        int[] arrays = new int[num];
+         Random random = new Random();
+         for (int i = 0; i < arrays.length; i++) {
+             arrays[i] = random.nextInt(99);
+             System.out.printf(i < arrays.length - 1 ? arrays[i] + ", " : arrays[i] + " -> ");
+             }
+         return arrays;
+    }
+
+    // Задача 30
+    // Задача 30: Напишите программу, которая
+    // выводит массив из 8 элементов, заполненный
+    // нулями и единицами в случайном порядке.
+    // [1,0,1,1,0,1,0,0]
+
+    public int[] arrays(int num){
+        int[] array = new int[num];
+        Random random = new Random();
+        for (int i = 0; i <array.length ; i++) {
+            array[i] = random.nextInt(0, 2);
+        }
+        return array;
+    }
+
+
+    // Задача 31
+    // Задача 31:
+    // 1. Задайте массив из 12 элементов,
+    // 2. заполненный случайными числами из промежутка [-9, 9].
+    // 3. Найдите сумму отрицательных и положительных элементов массива.
+    // Например, в массиве [3,9,-8,1,0,-7,2-1,8-3,-1,6]
+    // сумма положительных чисел равна 29,
+    // сумма отрицательных равна -20.
+
+    public int[] sumNumbers(int num, int negativeNum, int positiveNum){
+        int[] array = new int[num];
+        Random rnd = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rnd.nextInt(negativeNum, positiveNum);
+        }
+        return array;
+    }
+    public String sumPositiveAndNegative(int[] arrays){
+        int sumPositiveNumbers = 0, sumNegativeNumbers = 0;
+        for (int i = 0; i < arrays.length; i++) {
+            if (arrays[i] > 0){
+                sumPositiveNumbers += arrays[i];
+            }else {
+                sumNegativeNumbers +=arrays[i];
+            }
+        }
+        return String.format("%s: %d\n%s: %d", "Сумма положительных чисел равна",
+                sumPositiveNumbers, "Сумма отрицательных чисел равна",  sumNegativeNumbers);
+    }
 }
 
 
