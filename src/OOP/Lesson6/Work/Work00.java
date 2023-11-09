@@ -404,4 +404,28 @@ public class Work00 {
             }
         return String.format(" -> Нет");
     }
+
+    // Задача 34:
+    // Задайте массив заполненный случайными положительными трёхзначными числами.
+    // Напишите программу, которая покажет количество чётных чисел в массиве.
+
+    // [345, 897, 568, 234] -> 2
+
+    public int[] evenNumbers(int size, int min, int max){
+        int[] array = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(min, max);
+        }
+        return array;
+    }
+    public int countEvenNum(int[]arr){
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] % 2 == 0){
+                count++;
+            }
+        }
+        return count;
+    }
 }
