@@ -12,7 +12,7 @@ public class Work00 {
     // 4 -> 16
     // -3 -> 9
     // -7 -> 49
-    public int perfectSquare(int number){
+    public int perfectSquare(int number) {
         int perfect = number * number;
         return perfect;
     }
@@ -20,10 +20,10 @@ public class Work00 {
     // Задача 02
     // 1. Напишите программу, которая на входе принимает два
     // числа и проверяет, является ли первое число квадратом второго.
-    public String perfectSecond (int num1, int num2){
-        if(num1 * num1 == num2){
+    public String perfectSecond(int num1, int num2) {
+        if (num1 * num1 == num2) {
             return "первое число является квадратом второго числа";
-        } else if (num2 * num2 == num1){
+        } else if (num2 * num2 == num1) {
             return "второе число является квадратом первого числа";
         } else {
             return "первое число не является квадратом второго и наоборот";
@@ -38,7 +38,7 @@ public class Work00 {
     // a = 2; b = 10 -> max = 10
     // a = -9; b = -3 -> max = -3
 
-    public int maxNumbers (int a, int b){
+    public int maxNumbers(int a, int b) {
         return a > b ? a : b;
     }
 
@@ -50,14 +50,22 @@ public class Work00 {
 
     public String numDay(int num) {
         switch (num) {
-            case 1: return "Понедельник";
-            case 2: return "Вторник";
-            case 3: return "Среда";
-            case 4: return "Четверг";
-            case 5: return "Пятница";
-            case 6: return "Суббота";
-            case 7: return "Воскресенье";
-            default: return "Данного дня недели не существует";
+            case 1:
+                return "Понедельник";
+            case 2:
+                return "Вторник";
+            case 3:
+                return "Среда";
+            case 4:
+                return "Четверг";
+            case 5:
+                return "Пятница";
+            case 6:
+                return "Суббота";
+            case 7:
+                return "Воскресенье";
+            default:
+                return "Данного дня недели не существует";
         }
     }
 
@@ -70,7 +78,7 @@ public class Work00 {
     // 22, 3, 9 -> 22
 
     // Метод перегрузка
-    public int maxNumbers(int num1, int num2, int num3){
+    public int maxNumbers(int num1, int num2, int num3) {
         // Первый вариант
 //        if (num2 > num1 & num2 > num3){
 //            return num2;
@@ -106,8 +114,8 @@ public class Work00 {
     // -3 -> нет
     // 7 -> нет
 
-    public String evenNumber(int num){
-            return String.format("%d -> %s", num, num % 2 == 0 ? "Да" : "Нет");
+    public String evenNumber(int num) {
+        return String.format("%d -> %s", num, num % 2 == 0 ? "Да" : "Нет");
     }
 
     // Задача 08
@@ -118,7 +126,7 @@ public class Work00 {
     // 782 -> 2
     // 918 -> 8
 
-    public int secondNumbers (int num){
+    public int secondNumbers(int num) {
         return num / 10 % 10;
     }
 
@@ -131,10 +139,10 @@ public class Work00 {
 
     public String evenNumbers(int numbers) {
         System.out.printf("%d -> \"", numbers);
-          for (int i = 2; i < numbers ; i++) {
-               System.out.print(i % 2 == 0 ? i  : ", ");
-          }
-        return String.format(numbers % 2 == 0 ? numbers + "\"" : "\"" );
+        for (int i = 2; i < numbers; i++) {
+            System.out.print(i % 2 == 0 ? i : ", ");
+        }
+        return String.format(numbers % 2 == 0 ? numbers + "\"" : "\"");
     }
 
     // Задача 10
@@ -145,7 +153,7 @@ public class Work00 {
     // 12-> 2
     // 85 -> 8
 
-    public String maxRandomeNumbers(int numbers){
+    public String maxRandomeNumbers(int numbers) {
         return String.format("%d -> %s", numbers, numbers % 10 > numbers / 10 ?
                 numbers % 10 : numbers % 10 == numbers / 10 ? "Равны" : numbers / 10);
     }
@@ -158,7 +166,7 @@ public class Work00 {
     // 782 -> 8
     // 918 -> 1
 
-    public String maxFreeDigitNumber(int numbers){
+    public String maxFreeDigitNumber(int numbers) {
         return String.format("%d -> %s", numbers, numbers / 10 % 10);
     }
 
@@ -170,7 +178,7 @@ public class Work00 {
     // 782 -> 72
     // 918 -> 98
 
-    public String firstAndThirdNumbers(int numbers){
+    public String firstAndThirdNumbers(int numbers) {
         return String.format("%d -> %d%d", numbers, numbers / 100 % 10, numbers % 10);
     }
 
@@ -182,11 +190,11 @@ public class Work00 {
     // 34, 5 -> не кратно, остаток 4
     // 16, 4 -> кратно
 
-    public String multipleNumbers(int num1, int num2){
+    public String multipleNumbers(int num1, int num2) {
 //        return String.format("%d, %d -> %s", num1, num2, num1 % num2 == 0 ? "кратно" : "не кратно, остаток " + num1 % num2);
-        if (num1 % num2 == 0 | num2 % num1 == 0){
+        if (num1 % num2 == 0 | num2 % num1 == 0) {
             return String.format("%d, %d -> кратно", num1, num2);
-        }else return "не кратно, остаток " + num1 % num2;
+        } else return "не кратно, остаток " + num1 % num2;
     }
 
     // Задача 14
@@ -212,13 +220,12 @@ public class Work00 {
 //        }
 
 
-
         // Второй вариант - это когда заданное число переворачиваем и делим на 100 и выводим остаток от деления на 10
-        if (num < 99){
+        if (num < 99) {
             return "третьей цифры нет";
-        }else {
+        } else {
             long reverse = 0;
-            while (num != 0){
+            while (num != 0) {
                 long remainder = num % 10;
                 reverse = reverse * 10 + remainder;
                 num = num / 10;
@@ -235,7 +242,7 @@ public class Work00 {
     // 46 -> нет
     // 161 -> да
 
-    public String multipleNumbers(int num){
+    public String multipleNumbers(int num) {
         return num % 7 == 0 & num % 23 == 0 ? num + " -> Да" : num + " -> Нет";
     }
 
@@ -247,7 +254,7 @@ public class Work00 {
     // 7 -> да
     // 1 -> нет
 
-    public String DayOffOfTheWeek(int num){
+    public String DayOffOfTheWeek(int num) {
         System.out.printf("%d -> ", num);
         switch (num) {
             case 1:
@@ -278,7 +285,7 @@ public class Work00 {
     // 25, 5 -> да
     // 8, 9 -> нет
 
-    public String multiplay(int num, int num1){
+    public String multiplay(int num, int num1) {
         return String.format("%d, %d -> %s", num, num1, num * num == num1 ? "Да" : "Нет");
     }
 
@@ -287,7 +294,7 @@ public class Work00 {
     // 2. причём X ≠ 0 и Y ≠ 0 и
     // 3. выдаёт номер четверти плоскости, в которой находится эта точка.
 
-    public String guarterCoordinates(double X, double Y){
+    public String guarterCoordinates(double X, double Y) {
         if (X < 0 & Y > 0) {
             return "Первая четверть";
         } else if (X > 0 & Y > 0) {
@@ -308,12 +315,12 @@ public class Work00 {
 
     public int[] array(int num) {
         int[] arrays = new int[num];
-         Random random = new Random();
-         for (int i = 0; i < arrays.length; i++) {
-             arrays[i] = random.nextInt(99);
-             System.out.printf(i < arrays.length - 1 ? arrays[i] + ", " : arrays[i] + " -> ");
-             }
-         return arrays;
+        Random random = new Random();
+        for (int i = 0; i < arrays.length; i++) {
+            arrays[i] = random.nextInt(99);
+            System.out.printf(i < arrays.length - 1 ? arrays[i] + ", " : arrays[i] + " -> ");
+        }
+        return arrays;
     }
 
     // Задача 30
@@ -322,10 +329,10 @@ public class Work00 {
     // нулями и единицами в случайном порядке.
     // [1,0,1,1,0,1,0,0]
 
-    public int[] arrays(int num){
+    public int[] arrays(int num) {
         int[] array = new int[num];
         Random random = new Random();
-        for (int i = 0; i <array.length ; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(0, 2);
         }
         return array;
@@ -340,7 +347,7 @@ public class Work00 {
     // сумма положительных чисел равна 29,
     // сумма отрицательных равна -20.
 
-    public int[] sumNumbers(int num, int negativeNum, int positiveNum){
+    public int[] sumNumbers(int num, int negativeNum, int positiveNum) {
         int[] array = new int[num];
         Random rnd = new Random();
         for (int i = 0; i < array.length; i++) {
@@ -348,17 +355,18 @@ public class Work00 {
         }
         return array;
     }
-    public String sumPositiveAndNegative(int[] arrays){
+
+    public String sumPositiveAndNegative(int[] arrays) {
         int sumPositiveNumbers = 0, sumNegativeNumbers = 0;
         for (int i = 0; i < arrays.length; i++) {
-            if (arrays[i] > 0){
+            if (arrays[i] > 0) {
                 sumPositiveNumbers += arrays[i];
-            }else {
-                sumNegativeNumbers +=arrays[i];
+            } else {
+                sumNegativeNumbers += arrays[i];
             }
         }
         return String.format("%s: %d\n%s: %d", "Сумма положительных чисел равна",
-                sumPositiveNumbers, "Сумма отрицательных чисел равна",  sumNegativeNumbers);
+                sumPositiveNumbers, "Сумма отрицательных чисел равна", sumNegativeNumbers);
     }
 
     // Задача 32
@@ -367,19 +375,19 @@ public class Work00 {
     // соответствующие отрицательные, и наоборот.
     // [-4, -8, 8, 2] -> [4, 8, -8, -2]
 
-    public int[] arrays(int size, int min, int max){
+    public int[] arrays(int size, int min, int max) {
         int[] array = new int[size];
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(min,max);
+            array[i] = random.nextInt(min, max);
         }
         return array;
     }
 
-    public int[] replaceOfElementsArrays(int[] arr){
+    public int[] replaceOfElementsArrays(int[] arr) {
         int[] replArray = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            replArray[i] = arr[i ] * -1;
+            replArray[i] = arr[i] * -1;
         }
         return replArray;
     }
@@ -392,16 +400,17 @@ public class Work00 {
     // 3: массив [6,7,19,345,3]->да
 
 
-    public int[] arr(int size){
+    public int[] arr(int size) {
         int[] array = new int[size];
         Random rnd = new Random();
-        for (int i = 0; i < array.length; i++) array[i] = rnd.nextInt(1,5);
+        for (int i = 0; i < array.length; i++) array[i] = rnd.nextInt(1, 5);
         return array;
     }
-    public String presenceNum(int[]array, int num){
+
+    public String presenceNum(int[] array, int num) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == num) return String.format(" -> Да");
-            }
+        }
         return String.format(" -> Нет");
     }
 
@@ -411,7 +420,7 @@ public class Work00 {
 
     // [345, 897, 568, 234] -> 2
 
-    public int[] evenNumbers(int size, int min, int max){
+    public int[] evenNumbers(int size, int min, int max) {
         int[] array = new int[size];
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
@@ -419,10 +428,11 @@ public class Work00 {
         }
         return array;
     }
-    public int countEvenNum(int[]arr){
+
+    public int countEvenNum(int[] arr) {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i] % 2 == 0){
+            if (arr[i] % 2 == 0) {
                 count++;
             }
         }
@@ -440,7 +450,7 @@ public class Work00 {
     // [1, 2, 3, 6, 2] -> 0
     // [10, 11, 12, 13, 14] -> 5
 
-    public int countNumbers(int[] array, int lineSegmentMin, int lineSegmentMax){
+    public int countNumbers(int[] array, int lineSegmentMin, int lineSegmentMax) {
         int count = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > lineSegmentMin && array[i] < lineSegmentMax) {
@@ -459,7 +469,7 @@ public class Work00 {
     // [3, 7, 23, 12] -> 19
     // [-4, -6, 89, 6] -> 0
 
-    public int numEvenIndex(int[] array){
+    public int numEvenIndex(int[] array) {
         int count = 0;
         for (int i = 1; i < array.length; i += 2) {
             count += array[i];
@@ -475,12 +485,20 @@ public class Work00 {
     // [1 2 3 4 5] -> 5 8 3
     // [6 7 3 6] -> 36 21
 
-    public int multiplayNum(int[] array){
-
+    public int[] multiplayNum(int[] array) {
+        int size = array.length / 2;
+        if (array.length % 2 != 0) size += 1;
+        int[] result = new int[size];
         for (int i = 0; i < array.length / 2; i++) {
-             int res = array[i] * array[array.length - 1 - i];
-            System.out.printf(res + ", ");
+            result[i] = array[i] * array[array.length - 1 - i];
         }
-        return array.length % 2 == 1 ? array[array.length / 2] : (null);
+        if (array.length % 2 != 0) result[size - 1] = array[array.length / 2];
+        return result;
+    }
+    public void printArray(int[] array, String sep){
+        for (int i = 0; i < array.length; i++) {
+            if (i < array.length - 1) System.out.print(array[i] + sep);
+            else System.out.print(array[i]);
+        }
     }
 }
