@@ -593,7 +593,7 @@ public class Work00 {
         for (int i = 0; i < size; i++) {
             arr[i] = random.nextInt(min, max);
         }
-        for (int res: arr) {
+        for (int res : arr) {
             if (res > 0) {
                 count++;
             }
@@ -607,5 +607,15 @@ public class Work00 {
     // 13 -> 1101
     // 2 -> 10
 
+    public String theCalculusSystem(int num) {
+        int num1 = num;
+        String counter = "";
+        while (num >= 1) {
+//            counter.insert(0, (num % 2)); // дополнительный вариант
+            counter = (num % 2) + counter;
+            num /= 2;
+        }
+        return String.format("%s -> %s", num1, counter);
+    }
 
 }
