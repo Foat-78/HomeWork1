@@ -1,5 +1,6 @@
 package OOP.Lesson6.Work;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Work00 {
@@ -495,10 +496,47 @@ public class Work00 {
         if (array.length % 2 != 0) result[size - 1] = array[array.length / 2];
         return result;
     }
-    public void printArray(int[] array, String sep){
+
+    public void printArray(int[] array, String sep) {
         for (int i = 0; i < array.length; i++) {
             if (i < array.length - 1) System.out.print(array[i] + sep);
             else System.out.print(array[i]);
         }
+    }
+
+    // Задача 38
+    // Задайте массив вещественных чисел.
+    // Найдите разницу между максимальным и
+    // минимальным элементов массива.
+
+    // [3.5, 7.1, 22.9, 2.3, 78.5] -> 76.2
+
+    public double[] doubArray(int size, double min, double max) {
+        double[] doubles = new double[size];
+
+        Random random = new Random();
+        for (int i = 0; i < doubles.length; i++) {
+            doubles[i] = random.nextDouble(min, max);
+        }
+      return doubles;
+    }
+    public String differenceMinMax(double[] array) {
+        double max = 0;
+        double min = array[0];
+        for (double diff: array) {
+            if (diff > max){
+               max = diff;
+            } else if (diff < min){
+               min = diff;
+            }
+        }
+        return String.format(" -> %.2f", max - min);
+    }
+    public String[] printArray(double[] arrPrint){
+        String[] result = new String[arrPrint.length];
+        for (int i = 0; i < arrPrint.length; i++) {
+            result[i] = String.format("%.2f", arrPrint[i]);
+        }
+        return result;
     }
 }
