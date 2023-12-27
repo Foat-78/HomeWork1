@@ -1,5 +1,7 @@
 package OOP.Lesson6.Work;
 
+import StartJava.Lesson4.Array;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -518,25 +520,92 @@ public class Work00 {
         for (int i = 0; i < doubles.length; i++) {
             doubles[i] = random.nextDouble(min, max);
         }
-      return doubles;
+        return doubles;
     }
+
     public String differenceMinMax(double[] array) {
         double max = 0;
         double min = array[0];
-        for (double diff: array) {
-            if (diff > max){
-               max = diff;
-            } else if (diff < min){
-               min = diff;
+        for (double diff : array) {
+            if (diff > max) {
+                max = diff;
+            } else if (diff < min) {
+                min = diff;
             }
         }
         return String.format(" -> %.2f", max - min);
     }
-    public String[] printArray(double[] arrPrint){
+
+    public String[] printArray(double[] arrPrint) {
         String[] result = new String[arrPrint.length];
         for (int i = 0; i < arrPrint.length; i++) {
             result[i] = String.format("%.2f", arrPrint[i]);
         }
         return result;
     }
+
+
+    // Задача 39: Напишите программу, которая перевернёт
+    // одномерный массив (последний элемент будет на первом
+    // месте, а первый - на последнем и т.д.)
+    // [1 2 3 4 5] -> [5 4 3 2 1]
+    // [6 7 3 6] -> [6 3 7 6]
+
+    public int[] reversArray(int size, int min, int max) {
+        Random random = new Random();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextInt(min, max);
+        }
+        return array;
+    }
+
+    public int[] resRevArr(int[] array) {
+        int j = 0;
+        int[] result = new int[array.length];
+        for (int i = array.length - 1; i >= 0; i--) {
+            result[j++] = array[i];
+        }
+        return result;
+    }
+
+    // Задача 40: Напишите программу, которая принимает на вход три
+    // числа и проверяет, может ли существовать треугольник с сторонами
+    // такой длины.
+    // Теорема о неравенстве треугольника: каждая сторона треугольника
+    // меньше суммы двух других сторон.
+
+    public String triangle(int a, int b, int c) {
+        return String.format(a + b > c && b + c > a && c + a > b ? "Является треугольником" : "Не является треугольником");
+    }
+
+    // Задача 41:
+    // 1.Пользователь вводит с клавиатуры M чисел.
+    // 2.Посчитайте, сколько чисел больше 0 ввёл пользователь.
+    // 0, 7, 8, -2, -2 -> 2
+    // -1, -7, 567, 89, 223-> 3
+
+    public String countInNum(int size, int min, int max) {
+        Random random = new Random();
+        int j = 0;
+        int count = 0;
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = random.nextInt(min, max);
+        }
+        for (int res: arr) {
+            if (res > 0) {
+                count++;
+            }
+        }
+        return String.format(Arrays.toString(arr) + " -> " + count);
+    }
+
+    // Задача 42: Напишите программу, которая будет преобразовывать
+    // десятичное число в двоичное.
+    // 46 -> 101110
+    // 13 -> 1101
+    // 2 -> 10
+
+
 }
