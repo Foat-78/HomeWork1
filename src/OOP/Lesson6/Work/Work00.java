@@ -638,4 +638,24 @@ public class Work00 {
         }
         return res;
     }
+
+    // Задача 46: Задайте двумерный массив размером m×n,
+    // заполненный случайными целыми числами.
+    // m = 3, n = 4.
+
+    // 1   4  8  19
+    // 5  -2  3  -2
+    // 77  3  8  1
+
+    public int[][] matrixArray(int min, int max, int columns, int rows) {
+        int[][] ints = new int[rows][columns];
+        Random random = new Random();
+        for (int i = 0; i < ints.length; i++) {
+            for (int j = 0; j < ints.length; j++) {
+                ints[i][j] = random.nextInt( min, max);
+            }
+        }
+        return ints;
+    }
+
 }
